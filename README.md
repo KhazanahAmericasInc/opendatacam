@@ -1,3 +1,40 @@
+# Steps to run Jetson Nano board in KAI
+
+NOTE: every password on jetson nano board is "kai"
+
+I have set up the environment and opendatacam project and wifi hot spot. 
+
+Following are the steps to run Jetson Nano board with either your cell phone or mac or windows machine.
+
+1. Power on jetson nano board by pluging in the power supply
+
+2. Connect jetson nano board to a monitor
+3. Connect jetson nano board to keyboards and mouses
+4. Login Password:  kai
+5. check wifi connected to "jetson"
+6. open terminal
+``` bash
+sudo docker container list
+sudo docker restart 80c9cfb5ac2f
+```
+7. open you device, eithre cell phone or mac or windows
+
+8. connect your device to wifi "jetson"
+Note: "jetson" wifi can only connect to jetson nano board, does not have actual wifi connection.
+
+9. open browser
+10. open links 10.42.0.1:8080
+11. opendatacam start initialization
+12. start using it on your device
+13. after using it, open terminal on jetson nano board
+``` bash
+sudo docker stop 80c9cfb5ac2f
+```
+
+
+NOTE: If you want more instructions for opendatacam project on jetson nano, [please read this specific documentation](documentation/jetson/JETSON_NANO.md)_
+
+
 # OpenDataCam 2.0.0
 
 This project is offline lightweight DIY solution to monitor urban landscape. After installing this software on the specified hardware (Nvidia Jetson board + Logitech webcam), you will be able to count cars, pedestrians, motorbikes from your webcam live stream.
